@@ -14,7 +14,7 @@ Lazylights is a Python API for controlling Lifx bulbs.
 To install,
 
 ```shell
-pip install git+https://github.com/mpapi/lazylights
+pip install git+https://github.com/mpapi/lazylights@2.0
 ```
 
 Then, in Python,
