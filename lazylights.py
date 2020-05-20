@@ -10,7 +10,7 @@ _FORMAT_SIZE = struct.calcsize(_BASE_FORMAT)
 
 _SOCKET_BUFFER_SIZE = 65536
 
-ALL_BULBS = '\x00' * 6
+ALL_BULBS = b'\x00' * 6
 
 LIFX_PORT = 56700
 ADDR_BROADCAST = ('255.255.255.255', LIFX_PORT)
@@ -163,7 +163,7 @@ def set_power(bulbs, is_on):
     otherwise.
     """
     _send(bulbs, REQ_SET_POWER_STATE, '2s',
-          '\xff\xff' if is_on else '\x00\x00')
+          b'\xff\xff' if is_on else b'\x00\x00')
 
 
 def set_state(bulbs, hue, saturation, brightness, kelvin, fade, raw=False):
